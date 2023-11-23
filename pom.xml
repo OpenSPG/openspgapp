@@ -33,12 +33,76 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+  <modules>
+    <module>api/facade</module>
+    <module>api/http-client</module>
+    <module>api/http-server</module>
+    <module>arks/sofaboot</module>
+    <module>base/account</module>
+    <module>base/permission</module>
+    <module>common/util</module>
+    <module>infra/dao</module>
+    <module>test</module>
+    <module>base/scheduler</module>
+  </modules>
 
   <properties>
     <spotless.version>2.30.0</spotless.version>
   </properties>
 
   <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.antgroup.openspg.app</groupId>
+        <artifactId>api-facade</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg.app</groupId>
+        <artifactId>api-http-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg.app</groupId>
+        <artifactId>api-http-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg.app</groupId>
+        <artifactId>arks-sofaboot</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg.app</groupId>
+        <artifactId>base-account</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg.app</groupId>
+        <artifactId>base-permission</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg.app</groupId>
+        <artifactId>base-scheduler</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg.app</groupId>
+        <artifactId>common-util</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg.app</groupId>
+        <artifactId>infra-dao</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.antgroup.openspg.app</groupId>
+        <artifactId>test</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
   </dependencyManagement>
 
   <dependencies>
@@ -102,7 +166,8 @@
         <version>3.1.2</version>
         <configuration>
           <argLine>@{argLine} -Xmx1024m -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=512m
-            -Dfile.encoding=UTF-8</argLine>
+            -Dfile.encoding=UTF-8
+          </argLine>
           <includes>
             <include>**/*Test.groovy</include>
             <include>**/Test*.groovy</include>
