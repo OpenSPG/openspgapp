@@ -1,29 +1,44 @@
+/*
+ * Copyright 2023 Ant Group CO., Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied.
+ */
+
 package com.antgroup.openspg.app.base.account;
 
-import java.util.List;
-
 import com.antgroup.openspg.app.base.account.model.User;
+import java.util.List;
 
 public interface AccountRepository {
 
-    /**
-     * insert or update user
-     * @param user
-     * @return
-     */
-    Integer upsert(User user);
+  /**
+   * insert or update user
+   *
+   * @param user
+   * @return
+   */
+  Integer upsert(User user);
 
-    /**
-     * query by fuzzy keyword
-     * @param keyword  userNo or domainNo or name
-     * @return
-     */
-    List<User> queryLike(String keyword);
+  /**
+   * query by fuzzy keyword
+   *
+   * @param keyword userNo or domainNo or name
+   * @return
+   */
+  List<User> queryLike(String keyword);
 
-    /**
-     * query user by token
-     * @param token
-     * @return
-     */
-    User queryByToken(String token);
+  /**
+   * query user by token
+   *
+   * @param token
+   * @return
+   */
+  User queryByToken(String token);
 }
