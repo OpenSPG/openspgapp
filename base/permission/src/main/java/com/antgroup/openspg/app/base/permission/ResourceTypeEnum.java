@@ -11,6 +11,17 @@
  * or implied.
  */
 
-package com.antgroup.openspg.app.infra.dao;
+package com.antgroup.openspg.app.base.permission;
 
-public class xxx {}
+/** the kg resource type */
+public enum ResourceTypeEnum {
+
+  /** entityType */
+  TYPE,
+
+  /** relationType or property */
+  PROPERTY,
+
+  /** index */
+  INDEX;
+}
