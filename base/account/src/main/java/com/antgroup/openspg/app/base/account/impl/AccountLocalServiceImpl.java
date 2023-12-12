@@ -70,7 +70,7 @@ public class AccountLocalServiceImpl implements AccountService {
     User operator = new User();
     operator.setLoginAccount("知测");
     operator.setRealName("知测");
-    operator.setId("141964");
+    operator.setId(141964L);
     operator.setNickName("知测");
     return operator;
   }
